@@ -2,7 +2,7 @@
 name = "serde_rusqlite"
 version = "0.42.0"
 edition = "2021"
-rust-version = "1.82.0"
+rust-version = "1.95.0"
 description = "Serialize/deserialize rusqlite rows"
 keywords = ["serde", "sqlite", "rusqlite", "serialization", "deserialization"]
 categories = ["database", "encoding"]
@@ -17,9 +17,10 @@ maintenance = { status = "passively-maintained" }
 
 [features]
 rusqlite_fallible_uint = ["rusqlite/fallible_uint"]
+rusqlite_bundled_sqlcipher = ["rusqlite/bundled-sqlcipher"]
 
 [dependencies]
-rusqlite = "0.39"
+rusqlite = "0.40"
 serde_core = "1"
 
 [dev-dependencies]
